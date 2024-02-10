@@ -1,4 +1,4 @@
-docker stop wonderful_keller
+docker run -d -p8082:5000 --name my-container -e CURRENT_ENVIRONMENT=development my-image
 
 docker rename wonderful_keller backend
 
