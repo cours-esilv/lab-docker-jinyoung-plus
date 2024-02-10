@@ -1,6 +1,9 @@
+docker run -d -p8082:5000 --name my-container -e CURRENT_ENVIRONMEN=development my-image
+docker run -d -p8082:5000 --name my-container -eCURRENT_ENVIRONMEN=development my-image
 docker run -d -p 8082:5000 --name my-container -e CURRENT_ENVIRONMEN=development my-image
+docker run -d -p 8082:5000 --name my-container -eCURRENT_ENVIRONMEN=development my-image
 
-docker run -p8082:5000 -eCURRENT_ENVIRONMENT=development1 myimage
+docker run -p8082:5000 -e CURRENT_ENVIRONMENT=development1 myimage
 docker run -d -p 8082:5000 -e CURRENT_ENVIRONMENT=development myimage
 docker run -d -p8082:5000 -e CURRENT_environment=development myimage
 docker run -d -p 8082:5000 -e CURRENT_environment=development myimage
