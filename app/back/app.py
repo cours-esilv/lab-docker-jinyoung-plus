@@ -10,8 +10,9 @@ if 'CURRENT_ENVIRONMENT' not in os.environ:
     print('[ERROR] Please specify it when you start the container.', file=sys.stderr)
     sys.exit(1)
 
-# Create logs folder
-os.mkdir('./logs')
+# Create logs folder if it doesn't exist
+if not os.path.exists('./logs'):
+    os.mkdir('./logs')
 
 app = Flask(__name__)
 CORS(app)
@@ -42,3 +43,4 @@ def write(something):
     return {
         "status": "ok"
     }
+    

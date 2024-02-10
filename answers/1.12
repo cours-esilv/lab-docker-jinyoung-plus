@@ -1,0 +1,6 @@
+docker ps -a
+docker stop backend frontend
+docker rm backend frontend
+docker run -d -p 8086:80 -e WS_BACK_URL=http://localhost:8082 --name frontend jinyoungko/frontend:latest
+docker run -d -p 8082:5000 -e CURRENT_ENVIRONMENT=development --name backend jinyoungko/backend:latest
+docker ps -a

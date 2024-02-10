@@ -1,0 +1,28 @@
+docker images
+
+docker rmi $(docker images -q)
+
+docker rmi -f <image-id>
+
+-----------------------------------------------------------------------------------
+gitpod /workspace/lab-docker-jinyoung-plus/app/back (main) $ docker images
+REPOSITORY              TAG       IMAGE ID       CREATED          SIZE
+jinyoungko/backend      latest    b9cebc13cd40   19 minutes ago   139MB
+jinyoungko/frontend     latest    9d17265ccece   8 hours ago      44.3MB
+<none>                  <none>    f701d7ed8c47   8 hours ago      42.6MB
+<none>                  <none>    3da71432be91   8 hours ago      42.6MB
+<none>                  <none>    a141abcebc5d   9 hours ago      42.6MB
+<none>                  <none>    6281ecec516f   9 hours ago      42.6MB
+<none>                  <none>    1deaa7cf34ac   9 hours ago      42.6MB
+<none>                  <none>    51e7c8a6f989   9 hours ago      42.6MB
+yourusername/frontend   latest    75e89f9779ac   9 hours ago      139MB
+<none>                  <none>    812916191b70   9 hours ago      42.6MB
+jinyoungko/plus         latest    4c5f78b7d3b4   14 hours ago     139MB
+gitpod /workspace/lab-docker-jinyoung-plus/app/back (main) $ docker rmi -f 812916191b70  51e7c8a6f989 1deaa7cf34ac 6281ecec516f a141abcebc5d 3da71432be91 f701d7ed8c47
+Deleted: sha256:812916191b704f0d537f3fbb8c7f2a72e642fb6a5851979b8300c0be0ddf3952
+Deleted: sha256:51e7c8a6f989322bb68935173886889092aa611185f65a24a2e1a79017ae469f
+Deleted: sha256:1deaa7cf34ac553fce1833aaf94681a8e16d35228a6de4bc55602bdbc8489c89
+Deleted: sha256:6281ecec516fa4741df540c4b4c5f42b007e0af29e43ec63dcec78fd834c9a32
+Deleted: sha256:a141abcebc5d7daf99969bec5e8b48240e9f9823c4449449644f9c04022523dc
+Deleted: sha256:3da71432be9170694004badf69461d700bf78bbbf75dc6be59da8b109d7ce008
+Deleted: sha256:f701d7ed8c47bb96d56c4f0bc132dcea8cdac1081ba6e4f73dbca7e0ee89f68a

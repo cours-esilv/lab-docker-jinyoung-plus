@@ -1,0 +1,6 @@
+docker stop frontend backend
+
+docker rm frontend backend
+
+docker rmi jinyoungko/frontend:latest jinyoungko/plus:latest
+

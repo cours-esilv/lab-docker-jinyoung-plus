@@ -1,0 +1,6 @@
+docker exec -it backend sh
+apt-get update
+apt-get install -y curl
+
+curl -k https://8082-coursesilv-labdockerjin-bhua2n2xmwd.ws-eu108.gitpod.io/write/log%20message
+cat logs/my-messages.log
