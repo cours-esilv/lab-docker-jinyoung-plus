@@ -1,3 +1,15 @@
 
+docker stop my-backend-image
+
+docker rm my-backend-image
+
+docker run -d -p 8082:5000 -e CURRENT_ENVIRONMENT=development my-backend-image
+
 docker run -d -p 8082:5000 -e CURRENT_ENVIRONMENT=development jinyoungko/backend:latest
+
+export CURRENT_ENVIRONMENT=development
+
+echo "export VARIABLE_NAME=value" >> ~/.bashrc
+
+
 
